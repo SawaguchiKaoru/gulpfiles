@@ -11,11 +11,11 @@ const
     plumber       = require('gulp-plumber'),      // エラーによる他の実行停止防止
     notify        = require('gulp-notify'),       // エラー通知(デスクトップ)
     imagemin      = require('gulp-imagemin'),     // 画像圧縮
-    requireDir = require("require-dir"),        // ディレクトリ以下のJSファイルをまとめて読み込みます。
+    // requireDir = require("require-dir"),        // ディレクトリ以下のJSファイルをまとめて読み込みます。
     ejs           = require('gulp-ejs'),          // EJS
     rename        = require('gulp-rename'),       // ファイルリネーム
     connect       = require('gulp-connect'),      // ローカルサーバ
-    sync          = require('browser-sync').create();// ブラウザシンク
+    sync          = require('browser-sync').create(),// ブラウザシンク
     watch         = require("gulp-watch");        // 監視
 
 
