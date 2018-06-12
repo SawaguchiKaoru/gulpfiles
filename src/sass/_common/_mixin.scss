@@ -1,0 +1,76 @@
+/* Scss Document */
+
+
+// Mixin -------------------------------------------------------------------------------------------
+
+// WEB Fonts
+//-------------------------------------------------------------
+
+// @font-face {
+//     font-family: 'myfont';
+//   -webkit-font-smoothing:antialiased;
+//   -moz-osx-font-smoothing: auto;
+//   -moz-osx-font-smoothing: grayscale;
+//     font-weight: normal;
+//     font-style: normal;
+//     font-family: 'myfont';
+//     src: url('') format('woff2'),
+//          url('') format('woff'),
+//          url('') format('eof'),
+//          url('') format('truetype');
+// }
+////変数定義
+// $mainfont: 'myfont',Sans;
+//
+// @mixin myfont {
+//   font-family: $mainfont;
+//   -webkit-font-smoothing:antialiased;
+//   -moz-osx-font-smoothing: auto;
+//   -moz-osx-font-smoothing: grayscale;
+//   font-weight: lighter;
+// }
+
+// Noto Japanese
+@mixin Notosans( $font: "Noto Sans Japanese" ) {
+// htmlヘッダーにNoto Sans JP CDN記述
+  font-family: $font;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: lighter;
+}
+
+// media Query
+//-------------------------------------------------------------
+$breakpoint-up: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 768px)'
+  // 'lg': 'screen and (max-width: 1000px)',
+  // 'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+@mixin tb($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+// Brouser CSS
+//-------------------------------------------------------------
+@mixin IE10() { // IE 10~
+  @media all and (-ms-high-contrast: none){ @content; }
+}
+@mixin chrome() { // Chrome
+  @media screen and (-webkit-min-device-pixel-ratio:0) { @content; }
+}
+@mixin safari() { // Safari
+  @media screen and (-webkit-min-device-pixel-ratio:0) { @content; }
+}
+@mixin firefox() { // firefox
+  @-moz-document url-prefix() { @content; }
+}

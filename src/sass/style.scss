@@ -1,0 +1,10 @@
+// # common.scss
+// 各種ファイルの読み込み
+
+// -------------------------------------------------------
+
+
+@import "_common/reset";
+@import "_common/mixin";
+@import "_common/common";
+@import "_pages/index";

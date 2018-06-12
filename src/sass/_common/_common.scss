@@ -1,0 +1,43 @@
+/* Scss Document */
+
+// Default -----------------------------------------------------------------------------------------
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /*font-family: 'メイリオ','Hiragino Kaku Gothic Pro',Meiryo,'ヒラギノ角ゴ Pro W3','MS PGothic','MS UI Gothic',Helvetica,Arial,sans-serif;*/
+    font-family: "Hiragino sans",Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , "Noto Sans Japanese" , "Yu Gothic" , "YuGothic" , "Meiryo UI" , Meiryo , "MS PGothic" , sans-serif;
+    font-size: 1.0rem;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+    /*フォントサイズ初期設定 2017*/
+}
+
+// PC / SP
+.sp { display: none;}
+@include mq(){
+  .pc { display: none;}
+  .sp { display: block;}
+}
+
+/*スクロールバー全体*/
+::-webkit-scrollbar { width: 4px; }
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 50, .5);
+  border-radius: 2px;
+  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+
+// Parts -------------------------------------------------------------------------------------------
